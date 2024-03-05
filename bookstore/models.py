@@ -8,6 +8,9 @@ class Book(models.Model):
     author = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    image_url = models.CharField(max_length=2083, default=False)
+    follow_author = models.CharField(max_length=2083, blank=True)
+    book_available = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
